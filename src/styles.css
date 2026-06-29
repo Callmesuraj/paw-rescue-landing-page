@@ -102,6 +102,78 @@
   text-shadow: 0 0 24px var(--amber-glow);
 }
 
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.7rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.2s ease;
+  box-shadow: 0 10px 30px -12px var(--amber-glow);
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 40px -10px var(--amber-glow);
+    background-color: color-mix(in oklab, var(--primary) 92%, white);
+  }
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--foreground);
+  padding: 0.7rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  &:hover {
+    background-color: var(--secondary);
+    border-color: color-mix(in oklab, var(--primary) 40%, var(--border));
+    transform: translateY(-1px);
+  }
+}
+
+@utility btn-sage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--sage);
+  color: var(--sage-foreground);
+  padding: 0.7rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  &:hover {
+    transform: translateY(-1px);
+    background-color: color-mix(in oklab, var(--sage) 88%, white);
+  }
+}
+
+@utility social-btn {
+  display: inline-flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  &:hover {
+    color: var(--primary);
+    border-color: color-mix(in oklab, var(--primary) 50%, var(--border));
+    background-color: color-mix(in oklab, var(--primary) 10%, transparent);
+  }
+}
+
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
